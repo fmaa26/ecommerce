@@ -9,7 +9,9 @@ import 'popper.js/dist/popper.min';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import '@fortawesome/fontawesome-free/js/all.min';
 
-
+import 'webpack-jquery-ui';
+import 'webpack-jquery-ui/css';
+import 'jquery-ui-touch-punch/jquery.ui.touch-punch.min.js';
 $(function(){
 	$('[data-toggle="tooltip"]').tooltip()
     $('.add-to-cart-btn').click(function(){
@@ -123,5 +125,19 @@ var citiesByCountry = {
     $('#credit-card-info').toggle();
   });
   
+     //مكون البحث حسب السعر
+  
+    $( "#price-range" ).slider({
+      range: true,
+      min: 50,
+      max: 1000,
+      step: 50,
+      values: [ 250, 800 ],
+      slide: function( event, ui ) {
+      $('#price-min').text(ui.values[0]);
+      $('#price-max').text(ui.values[1]);
+  } 
+});
+
 });
 
