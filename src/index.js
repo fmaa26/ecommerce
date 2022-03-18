@@ -1,17 +1,19 @@
 
-import '@laylazi/bootstrap-rtl/dist/css/bootstrap-rtl.min.css';
+import "@laylazi/bootstrap-rtl-scss/scss/bootstrap-rtl";
+import "./scss/style.scss"
+import "./css/style.css";
 
-import './css/style.css';
-import 'webpack-jquery-ui';
-import 'jquery/dist/jquery.min';
+import "jquery/dist/jquery.min.js";
+import "popper.js/dist/popper.min.js";
 
-import 'popper.js/dist/popper.min';
-import 'bootstrap/dist/js/bootstrap.min.js';
-import '@fortawesome/fontawesome-free/js/all.min';
+import "bootstrap/dist/js/bootstrap.min.js";
 
-import 'webpack-jquery-ui';
-import 'webpack-jquery-ui/css';
-import 'jquery-ui-touch-punch/jquery.ui.touch-punch.min.js';
+import "@fortawesome/fontawesome-free/js/all.min";
+
+import "webpack-jquery-ui";
+import "webpack-jquery-ui/css";
+import "jquery-ui-touch-punch/jquery.ui.touch-punch"
+
 $(function(){
 	$('[data-toggle="tooltip"]').tooltip()
     $('.add-to-cart-btn').click(function(){

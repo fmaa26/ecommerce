@@ -37,18 +37,13 @@ module.exports = {
                   },
               ],
           },
-          {
-              test: /\.css$/,
+             {
+              test: /\.(sa|sc|c)ss$/,
               use: [
-                {
-                    loader:
-             MiniCssExtractPlugin.loader, 
-             options: {
-                 publicPath: '../'
-             } 
-                },
-                  
-                  'css-loader',
+                 MiniCssExtractPlugin.loader, 
+                              
+                  'css-loader', 
+                  'sass-loader'
               ]
           },
 
@@ -109,6 +104,10 @@ module.exports = {
     new HtmlWebpackPlugin({
         filename: "search.html",
         template: "./src/search.html",
+    }),
+    new HtmlWebpackPlugin({
+        filename: "contact.html",
+        template: "./src/contact.html",
     }),
     new MiniCssExtractPlugin({filename: "css/style.css"}),
     new OptimizeCSSAssetsPlugin({}),
